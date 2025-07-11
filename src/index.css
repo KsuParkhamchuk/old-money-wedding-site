@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,102 +8,72 @@
 
 @layer base {
   :root {
-    /* Old Money Color Palette */
-    --background: 42 35% 96%;
-    --foreground: 30 25% 8%;
+    /* Minimal color palette - Black & White */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 40 40% 98%;
-    --card-foreground: 30 25% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 40 40% 98%;
-    --popover-foreground: 30 25% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Deep navy primary for elegance */
-    --primary: 220 35% 15%;
-    --primary-foreground: 42 35% 96%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm cream secondary */
-    --secondary: 42 45% 92%;
-    --secondary-foreground: 30 25% 8%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    /* Soft muted tones */
-    --muted: 40 30% 90%;
-    --muted-foreground: 30 15% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Gold accent for luxury */
-    --accent: 45 90% 70%;
-    --accent-foreground: 30 25% 8%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
 
-    /* Sophisticated border */
-    --border: 40 25% 85%;
-    --input: 40 25% 85%;
-    --ring: 220 35% 15%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
 
-    /* Wedding specific colors */
-    --wedding-gold: 45 90% 70%;
-    --wedding-cream: 42 45% 92%;
-    --wedding-navy: 220 35% 15%;
-    --wedding-sage: 120 25% 75%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Gradients */
-    --gradient-elegant: linear-gradient(135deg, hsl(42 45% 92%), hsl(45 90% 85%));
-    --gradient-sophisticated: linear-gradient(180deg, hsl(42 35% 96%), hsl(40 40% 98%));
+    --radius: 0rem;
 
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 0%;
   }
 
   .dark {
-    /* Dark mode old money - rich deep tones */
-    --background: 30 25% 8%;
-    --foreground: 42 35% 96%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 30 30% 12%;
-    --card-foreground: 42 35% 96%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 30 30% 12%;
-    --popover-foreground: 42 35% 96%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 45 90% 70%;
-    --primary-foreground: 30 25% 8%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 30 20% 18%;
-    --secondary-foreground: 42 35% 96%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 30 15% 20%;
-    --muted-foreground: 40 20% 70%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 45 90% 70%;
-    --accent-foreground: 30 25% 8%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
 
-    --border: 30 15% 25%;
-    --input: 30 15% 25%;
-    --ring: 45 90% 70%;
-
-    /* Dark mode wedding colors */
-    --wedding-gold: 45 90% 70%;
-    --wedding-cream: 42 25% 85%;
-    --wedding-navy: 220 50% 25%;
-    --wedding-sage: 120 25% 65%;
-
-    /* Dark gradients */
-    --gradient-elegant: linear-gradient(135deg, hsl(30 30% 12%), hsl(30 20% 18%));
-    --gradient-sophisticated: linear-gradient(180deg, hsl(30 25% 8%), hsl(30 30% 12%));
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
   }
 }
 
@@ -117,28 +87,24 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-cormorant;
   }
 }
 
 @layer components {
-  .wedding-gradient {
-    background: var(--gradient-elegant);
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
   }
-
-  .sophisticated-gradient {
-    background: var(--gradient-sophisticated);
-  }
-
-  .old-money-shadow {
-    box-shadow: 0 10px 40px -10px hsl(var(--wedding-navy) / 0.1);
-  }
-
-  .elegant-border {
-    border: 1px solid hsl(var(--border));
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
   }
 
   .section-padding {
-    @apply py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8;
+    @apply py-12 px-6 sm:py-20 sm:px-8;
+  }
+
+  .minimal-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
 }
