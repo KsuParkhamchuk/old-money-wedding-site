@@ -11,11 +11,11 @@ const Index = () => {
         <div className="max-w-2xl mx-auto">
           <div className="mb-16">
             <div className="text-9xl sm:text-[12rem] md:text-[16rem] font-cormorant font-light text-primary mb-8 leading-none">
-              М
+              A
             </div>
             <div className="space-y-2 mb-8">
               <p className="text-sm uppercase tracking-[0.2em] font-inter font-light text-muted-foreground">
-                мы приглашаем вас присоединиться к
+                Мы приглашаем вас присоединиться к
               </p>
               <p className="text-sm uppercase tracking-[0.2em] font-inter font-light text-muted-foreground">
                 нашей свадьбе
@@ -25,27 +25,14 @@ const Index = () => {
           
           <div className="space-y-6">
             <div className="text-4xl sm:text-5xl md:text-6xl font-cormorant font-light text-primary">
-              <div>М А Р К</div>
+              <div>A Л Е К С А Н Д Р А</div>
               <div className="italic text-2xl sm:text-3xl md:text-4xl my-4 font-light">и</div>
-              <div>С А Р А</div>
+              <div>И Л Ь Я</div>
             </div>
             
-            <div className="pt-8 space-y-2">
-              <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
-                воскресенье
-              </div>
-              <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
-                18:00
-              </div>
-              <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
-                29 декабря 2024
-              </div>
-              <div className="text-xs uppercase tracking-[0.2em] font-inter font-light text-muted-foreground pt-2">
-                ул. где-то 123, любой город, 12345
-              </div>
-              <div className="text-xs uppercase tracking-[0.2em] font-inter font-light text-muted-foreground">
-                церемония последует
-              </div>
+            
+            <div className="text-9xl sm:text-[12rem] md:text-[16rem] font-cormorant font-light text-primary mb-8 leading-none">
+              И
             </div>
           </div>
         </div>
@@ -55,14 +42,26 @@ const Index = () => {
       <section className="section-padding bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="aspect-[3/4] bg-muted flex items-center justify-center">
-              <Camera className="w-8 h-8 text-muted-foreground" />
+            <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
+              <img 
+                src="/images/w1.JPG" 
+                alt="Wedding photo 1" 
+                className="object-cover w-full h-full transition-transform hover:scale-105" 
+              />
             </div>
-            <div className="aspect-[3/4] bg-muted flex items-center justify-center">
-              <Camera className="w-8 h-8 text-muted-foreground" />
+            <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
+              <img 
+                src="/images/w2.JPG" 
+                alt="Wedding photo 2" 
+                className="object-cover w-full h-full transition-transform hover:scale-105" 
+              />
             </div>
-            <div className="aspect-[3/4] bg-muted flex items-center justify-center">
-              <Camera className="w-8 h-8 text-muted-foreground" />
+            <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
+              <img 
+                src="/images/w3.JPG" 
+                alt="Wedding photo 3" 
+                className="object-cover w-full h-full transition-transform hover:scale-105" 
+              />
             </div>
           </div>
         </div>
@@ -72,32 +71,27 @@ const Index = () => {
       <section className="section-padding">
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-6xl sm:text-8xl font-cormorant font-light text-primary mb-12 leading-none">
-            М
+            Д Е Т А Л И
           </div>
           
           <div className="space-y-8 text-sm font-inter">
-            <div>
-              <h3 className="text-lg font-cormorant font-medium mb-4 uppercase tracking-wider">детали</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="uppercase tracking-[0.1em]">для вашего удобства</p>
-                <p className="font-light">блок номеров зарезервирован в</p>
-                <p className="font-light">отеле тихий</p>
-              </div>
-            </div>
+
             
             <div>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="uppercase tracking-[0.1em] font-medium">пожалуйста, забронируйте номер</p>
-                <p className="font-light">до 15 ноября. Не забудьте упомянуть</p>
-                <p className="font-light">"свадьба марка и сары" при</p>
-                <p className="font-light">бронировании.</p>
-              </div>
-            </div>
-            
-            <div className="pt-4">
-              <p className="font-light text-primary">www.отельтихий.com</p>
-              <p className="font-light">800 тихая ул.</p>
-              <p className="font-light text-muted-foreground">123-456-789</p>
+            <div className="pt-8 space-y-2">
+                <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
+                  Воскресенье
+                </div>
+                <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
+                  15:00
+                </div>
+                <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
+                  17 августа 2025
+                </div>
+                <div className="text-xs uppercase tracking-[0.2em] font-inter font-light text-muted-foreground pt-2">
+                Дзержинский р-н, д. Новинка, ул. Центральная, 17
+                </div>
+            </div>  
             </div>
           </div>
         </div>
@@ -107,47 +101,39 @@ const Index = () => {
       <section className="section-padding bg-secondary/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-cormorant text-center mb-12 uppercase tracking-wider">
-            программа дня
+          Тайминг мероприятия
           </h2>
           
           <div className="space-y-8">
             <div className="flex items-center justify-between border-b border-border pb-4">
-              <span className="text-lg font-cormorant">18:00</span>
+              <span className="text-lg font-cormorant">15:00</span>
               <div className="text-right">
-                <h3 className="font-inter font-medium">прибытие гостей</h3>
+                <h3 className="font-inter font-medium">Прибытие гостей</h3>
                 <p className="text-sm text-muted-foreground">приветственные напитки</p>
               </div>
             </div>
             
             <div className="flex items-center justify-between border-b border-border pb-4">
-              <span className="text-lg font-cormorant">18:30</span>
+              <span className="text-lg font-cormorant">15:30</span>
               <div className="text-right">
-                <h3 className="font-inter font-medium">церемония</h3>
+                <h3 className="font-inter font-medium">Выездная церемония</h3>
                 <p className="text-sm text-muted-foreground">в саду</p>
               </div>
             </div>
             
             <div className="flex items-center justify-between border-b border-border pb-4">
-              <span className="text-lg font-cormorant">19:00</span>
+              <span className="text-lg font-cormorant">16:00 - 23:00</span>
               <div className="text-right">
-                <h3 className="font-inter font-medium">коктейльный час</h3>
+                <h3 className="font-inter font-medium">Празничный банкет</h3>
                 <p className="text-sm text-muted-foreground">праздник и фотосессия</p>
               </div>
             </div>
             
             <div className="flex items-center justify-between border-b border-border pb-4">
-              <span className="text-lg font-cormorant">21:00</span>
+              <span className="text-lg font-cormorant">23:15</span>
               <div className="text-right">
-                <h3 className="font-inter font-medium">прием</h3>
+                <h3 className="font-inter font-medium">Отправление трансфера </h3>
                 <p className="text-sm text-muted-foreground">ужин, танцы, празднование</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-between">
-              <span className="text-lg font-cormorant">02:15</span>
-              <div className="text-right">
-                <h3 className="font-inter font-medium">трансфер</h3>
-                <p className="text-sm text-muted-foreground">отправление шаттла</p>
               </div>
             </div>
           </div>
@@ -155,38 +141,38 @@ const Index = () => {
       </section>
 
       {/* Our Story */}
-      <section className="section-padding">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-cormorant text-center mb-12 uppercase tracking-wider">
-            наша история
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-center font-inter leading-relaxed">
+      <section className="flex flex-col md:flex-row">
+        {/* Story Content */}
+        <div className="w-full md:w-1/2 py-16 px-8">
+          <div className="max-w-xl mx-auto">
+            <h2 className="text-3xl font-cormorant text-center mb-12 uppercase tracking-wider">
+              Наша история
+            </h2>
+            
+            <div className="prose prose-lg max-w-none text-center font-inter leading-relaxed">
             <p className="text-base mb-6">
-              Наша история началась в стенах академии вестфилд, во время школьной поездки в исторический 
-              город чарлстон. Именно там, среди мощеных улиц и довоенной архитектуры, 
-              наши пути впервые пересеклись. Тогда мы были просто знакомыми, но что-то в нашем 
-              совместном смехе и разговорах заложило основу для чего-то необыкновенного.
+            Наша история началась в стенах Лицея №2, во время поездки в Гродно. Именно там, среди новых впечатлений и оживленных разговоров, наши пути впервые пересеклись. Тогда мы были просто знакомыми, но что-то в наших улыбках и взглядах заложило фундамент для чего-то большего.Долгое время мы оставались друзьями, обмениваясь сообщениями, шутками и поддержкой. Мы вместе участвовали в общественной деятельности лицея, организуя мероприятия и деля сцену во время выступлений. Каждый совместный проект, каждая репетиция сближали нас, хотя мы еще не осознавали, куда приведет эта связь. Но в один особенный день всё изменилось. Искра, что тлела в наших сердцах, вспыхнула ярким пламенем, и мы поняли, что уже не можем быть просто друзьями.
             </p>
             
             <p className="text-base mb-6">
-              Годами мы оставались близкими друзьями, переписывались, делились мечтами и поддерживали 
-              друг друга в жизненных приключениях. Мы работали вместе над школьными проектами, выступали 
-              в театральных постановках и тянулись к обществу друг друга. Каждый общий момент, 
-              каждый разговор углублял нашу связь, хотя мы еще не понимали, к чему это приведет.
-            </p>
-            
-            <p className="text-base mb-6">
-              Затем в один прекрасный осенний день все изменилось. Искра, которая тихо тлела 
-              в наших сердцах, вспыхнула ярким пламенем. Мы поняли, что то, что у нас было, — это больше, чем 
-              дружба — это была любовь. С того момента мы знали, что хотим построить жизнь вместе, 
-              создавая новые воспоминания, чтя прекрасное путешествие, которое привело нас сюда.
+            Вместе мы сияли на сцене, ведя выпускной вечер, где смех, взгляды и общие моменты стали началом нашей любви. С того дня прошло четыре года, и каждый из них был наполнен теплом, приключениями и взаимопониманием. Мы стали не просто парой, а настоящими партнерами, которые вместе растут, мечтают и преодолевают все преграды.
+            Теперь, стоя рука об руку, мы готовы к новой главе нашей истории. Мы не можем дождаться, чтобы разделить нашу любовь и радость с вами, когда мы сделаем следующий шаг вместе!
             </p>
             
             <p className="text-base text-center italic font-cormorant text-lg">
               "два сердца, одно путешествие, бесконечная любовь."
             </p>
+            </div>
           </div>
+        </div>
+
+        {/* Horizontal Photo - Takes half screen width with no padding */}
+        <div className="w-full md:w-1/2 h-[100vh] overflow-hidden">
+          <img 
+            src="/images/w4.JPG" 
+            alt="Couple story photo" 
+            className="w-full h-full object-cover" 
+          />
         </div>
       </section>
 
@@ -194,7 +180,7 @@ const Index = () => {
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-6xl sm:text-8xl font-cormorant font-light mb-12 leading-none">
-            М
+            А & И
           </div>
           
           <h2 className="text-2xl font-cormorant mb-8 uppercase tracking-wider">
@@ -248,7 +234,7 @@ const Index = () => {
       <footer className="py-8 bg-background text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm font-inter font-light uppercase tracking-wider">
-            марк & сара • 29 декабря 2024
+            Александра & Илья • 17 августа 2025
           </p>
           <p className="text-xs mt-2 text-muted-foreground font-inter">
             с любовью и ожиданием
