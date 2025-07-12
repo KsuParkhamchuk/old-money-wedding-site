@@ -1,9 +1,39 @@
 import { MapPin, Calendar, Clock, Heart, ExternalLink, Camera, Phone, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
+  // Countdown timer state
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+  
+  useEffect(() => {
+    const weddingDate = new Date('August 17, 2025 15:00:00').getTime();
+    
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = weddingDate - now;
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        });
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Minimal with large letter */}
@@ -44,21 +74,21 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
               <img 
-                src="/images/w1.JPG" 
+                src="./images/w1.JPG" 
                 alt="Wedding photo 1" 
                 className="object-cover w-full h-full transition-transform hover:scale-105" 
               />
             </div>
             <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
               <img 
-                src="/images/w2.JPG" 
+                src="./images/w2.JPG" 
                 alt="Wedding photo 2" 
                 className="object-cover w-full h-full transition-transform hover:scale-105" 
               />
             </div>
             <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md">
               <img 
-                src="/images/w3.JPG" 
+                src="./images/w3.JPG" 
                 alt="Wedding photo 3" 
                 className="object-cover w-full h-full transition-transform hover:scale-105" 
               />
@@ -70,7 +100,7 @@ const Index = () => {
       {/* Details Section */}
       <section className="section-padding">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-6xl sm:text-8xl font-cormorant font-light text-primary mb-12 leading-none">
+          <div className="text-5xl sm:text-6xl font-cormorant font-light text-primary mb-12 leading-none">
             Д Е Т А Л И
           </div>
           
@@ -79,19 +109,38 @@ const Index = () => {
             
             <div>
             <div className="pt-8 space-y-2">
-                <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
-                  Воскресенье
+            <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
+                  17 августа 2025
                 </div>
                 <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
                   15:00
                 </div>
                 <div className="text-sm uppercase tracking-[0.2em] font-inter font-light">
-                  17 августа 2025
+                  Воскресенье
                 </div>
                 <div className="text-xs uppercase tracking-[0.2em] font-inter font-light text-muted-foreground pt-2">
                 Дзержинский р-н, д. Новинка, ул. Центральная, 17
                 </div>
+            
+                {/* Google Maps Link */}
             </div>  
+            <div className="mt-8">
+              <a 
+                href="https://maps.google.com/?q=Дзержинский+р-н+д.+Новинка+ул.+Центральная+17" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center py-2 px-4 border border-primary/30 text-xs uppercase tracking-wider font-inter text-primary/80 hover:bg-primary/5 transition-colors"
+              >
+                <MapPin className="w-4 h-4 mr-2" /> Посмотреть на карте
+              </a>
+            </div>
+            <div className="aspect-[3/4] bg-muted overflow-hidden rounded-md mt-8">
+              <img 
+                src="./images/w5.png" 
+                alt="Wedding photo 5" 
+                className="object-cover w-full h-full transition-transform hover:scale-105" 
+              />
+            </div>
             </div>
           </div>
         </div>
@@ -100,16 +149,15 @@ const Index = () => {
       {/* Schedule Section */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-cormorant text-center mb-12 uppercase tracking-wider">
-          Тайминг мероприятия
-          </h2>
+        <div className="text-5xl sm:text-6xl font-cormorant font-light text-primary mb-12 leading-none text-center">
+            Т А Й М И Н Г
+          </div>
           
           <div className="space-y-8">
             <div className="flex items-center justify-between border-b border-border pb-4">
               <span className="text-lg font-cormorant">15:00</span>
               <div className="text-right">
                 <h3 className="font-inter font-medium">Прибытие гостей</h3>
-                <p className="text-sm text-muted-foreground">приветственные напитки</p>
               </div>
             </div>
             
@@ -117,7 +165,6 @@ const Index = () => {
               <span className="text-lg font-cormorant">15:30</span>
               <div className="text-right">
                 <h3 className="font-inter font-medium">Выездная церемония</h3>
-                <p className="text-sm text-muted-foreground">в саду</p>
               </div>
             </div>
             
@@ -125,7 +172,6 @@ const Index = () => {
               <span className="text-lg font-cormorant">16:00 - 23:00</span>
               <div className="text-right">
                 <h3 className="font-inter font-medium">Празничный банкет</h3>
-                <p className="text-sm text-muted-foreground">праздник и фотосессия</p>
               </div>
             </div>
             
@@ -133,7 +179,6 @@ const Index = () => {
               <span className="text-lg font-cormorant">23:15</span>
               <div className="text-right">
                 <h3 className="font-inter font-medium">Отправление трансфера </h3>
-                <p className="text-sm text-muted-foreground">ужин, танцы, празднование</p>
               </div>
             </div>
           </div>
@@ -145,7 +190,7 @@ const Index = () => {
         {/* Story Content */}
         <div className="w-full md:w-1/2 py-16 px-8">
           <div className="max-w-xl mx-auto">
-            <h2 className="text-3xl font-cormorant text-center mb-12 uppercase tracking-wider">
+            <h2 className="text-4xl font-cormorant text-center mb-12 uppercase tracking-wider">
               Наша история
             </h2>
             
@@ -169,10 +214,131 @@ const Index = () => {
         {/* Horizontal Photo - Takes half screen width with no padding */}
         <div className="w-full md:w-1/2 h-[100vh] overflow-hidden">
           <img 
-            src="/images/w4.JPG" 
+            src="./images/w4.JPG" 
             alt="Couple story photo" 
             className="w-full h-full object-cover" 
           />
+        </div>
+      </section>
+
+      {/* Dress Code Section */}
+      <section className="section-padding bg-secondary/30">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="text-5xl sm:text-4xl font-cormorant font-light text-primary mb-12 leading-none whitespace-nowrap">
+            Д Р Е С С&#8209;К О Д
+          </div>
+          
+          <div className="space-y-6 mb-12">
+            <p className="text-base font-inter leading-relaxed">
+              Для нас самое главное ваше присутствие!<br />
+              Но мы будем очень благодарны, если поддержите<br /> 
+              дресс-код нашей свадьбы!
+            </p>
+          </div>
+          
+          <div className="py-6 border-y border-primary/20">
+            <h3 className="text-3xl font-cormorant font-light tracking-widest mb-8 whitespace-nowrap">
+              OLD MONEY
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
+              {/* For Ladies */}
+              <div className="space-y-4">
+                <h4 className="font-inter uppercase tracking-widest text-xs whitespace-nowrap">Для дам</h4>
+                <ul className="text-sm space-y-2 text-muted-foreground font-inter">
+                  <li>Элегантные платья миди или макси длины</li>
+                  <li>Пастельные и приглушенные тона</li>
+                  <li>Натуральные ткани (шёлк, лён, хлопок)</li>
+                  <li>Минималистичные украшения</li>
+                </ul>
+              </div>
+              
+              {/* For Gentlemen */}
+              <div className="space-y-4">
+                <h4 className="font-inter uppercase tracking-widest text-xs whitespace-nowrap">Для господ</h4>
+                <ul className="text-sm space-y-2 text-muted-foreground font-inter">
+                  <li>Светлые костюмы или брюки с рубашкой</li>
+                  <li>Нейтральная цветовая палитра</li>
+                  <li>Классический крой</li>
+                  <li>Минимум аксессуаров</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex justify-center mt-10 space-x-8">
+            <img 
+              src="./images/w6.jpg" 
+              alt="Ladies dress code inspiration" 
+              className="w-38 h-48 object-cover rounded-md" 
+            />
+            <img 
+              src="./images/w7.jpg" 
+              alt="Gentlemen dress code inspiration" 
+              className="w-38 h-48 object-cover  rounded-md" 
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Countdown Timer Section */}
+      <section className="section-padding bg-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="text-3xl font-cormorant font-light text-primary mb-8">
+            <span className="whitespace-nowrap">До нашей свадьбы</span> <span className="whitespace-nowrap">осталось</span>
+          </div>
+          
+          <div className="flex justify-center items-center max-w-3xl mx-auto py-4">
+            {/* Days */}
+            <div className="flex flex-col items-center">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">
+                {timeLeft.days.toString().padStart(3, '0')}
+              </div>
+              <div className="text-xs uppercase tracking-widest font-inter text-muted-foreground whitespace-nowrap">дней</div>
+            </div>
+            
+            {/* Delimiter */}
+            <div className="flex flex-col items-center mx-2 sm:mx-4 md:mx-10 mt-2">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">:</div>
+              <div className="text-xs h-4"></div>
+            </div>
+            
+            {/* Hours */}
+            <div className="flex flex-col items-center">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">
+                {timeLeft.hours.toString().padStart(2, '0')}
+              </div>
+              <div className="text-xs uppercase tracking-widest font-inter text-muted-foreground whitespace-nowrap">часов</div>
+            </div>
+            
+            {/* Delimiter */}
+            <div className="flex flex-col items-center mx-2 sm:mx-4 md:mx-10 mt-2">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">:</div>
+              <div className="text-xs h-4"></div>
+            </div>
+            
+            {/* Minutes */}
+            <div className="flex flex-col items-center">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">
+                {timeLeft.minutes.toString().padStart(2, '0')}
+              </div>
+              <div className="text-xs uppercase tracking-widest font-inter text-muted-foreground whitespace-nowrap">минут</div>
+            </div>
+            
+            {/* Delimiter */}
+            <div className="flex flex-col items-center mx-2 sm:mx-4 md:mx-10 mt-2">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">:</div>
+              <div className="text-xs h-4"></div>
+            </div>
+            
+            {/* Seconds */}
+            <div className="flex flex-col items-center">
+              <div className="text-5xl font-cormorant font-light text-primary mb-2">
+                {timeLeft.seconds.toString().padStart(2, '0')}
+              </div>
+              <div className="text-xs uppercase tracking-widest font-inter text-muted-foreground whitespace-nowrap">секунд</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -184,12 +350,11 @@ const Index = () => {
           </div>
           
           <h2 className="text-2xl font-cormorant mb-8 uppercase tracking-wider">
-            пожалуйста, ответьте
+            Ждем вашего ответа
           </h2>
           
           <p className="text-base font-inter mb-8 leading-relaxed">
-            ваше присутствие сделает наш особенный день завершенным. 
-            пожалуйста, дайте нам знать, присоединитесь ли вы к нам на праздновании.
+          Мы с нетерпением ждем встречи с вами! Если вы привезете с собой гостя или у вас есть особые диетические ограничения, пожалуйста, укажите это ниже.
           </p>
           
           <div className="space-y-6">
@@ -200,12 +365,12 @@ const Index = () => {
               onClick={() => window.open('https://forms.google.com/create', '_blank')}
             >
               <ExternalLink className="w-4 h-4 mr-2" />
-              ответить через google форму
+              Ответить через google форму
             </Button>
             
             <div className="pt-6 text-xs font-inter space-y-3">
               <p className="uppercase tracking-wider mb-4">
-                альтернативные способы ответа:
+                Альтернативные способы ответа:
               </p>
               <div className="space-y-2 text-xs">
                 <div className="flex items-center justify-center space-x-2">
@@ -216,15 +381,13 @@ const Index = () => {
                   <Phone className="w-3 h-3" />
                   <span>(555) 123-LOVE</span>
                 </div>
-                <p>• форма ответа на свадебном сайте</p>
-                <p>• обычная почта по нашему адресу</p>
               </div>
             </div>
             
             <Separator className="my-8 bg-primary-foreground/20" />
             
             <p className="text-xs font-inter uppercase tracking-wider">
-              просим ответить до <strong>1 декабря 2024</strong> для планирования.
+              Просим сообщить нам до <strong>1 августа 2025 года</strong> 
             </p>
           </div>
         </div>

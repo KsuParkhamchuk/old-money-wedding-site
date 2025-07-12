@@ -8,12 +8,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const getBaseName = () => {
+  return import.meta.env.DEV ? '' : "/old-money-wedding-site"
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBaseName()}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
