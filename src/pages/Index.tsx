@@ -1,15 +1,16 @@
 import {
   MapPin,
-  Calendar,
-  Clock,
-  Heart,
   ExternalLink,
-  Camera,
   Phone,
-  Mail,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -328,6 +329,66 @@ const Index = () => {
               className="w-full md:w-48 md:h-auto object-contain rounded-md"
             />
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-background">
+        <div className="max-w-3xl mx-auto text-left">
+          <div className="text-4xl sm:text-5xl font-cormorant font-light text-primary mb-4">
+            Часто задаваемые вопросы
+          </div>
+          <p className="text-base font-inter text-muted-foreground mb-12">
+            Есть вопросы? У нас есть ответы! Здесь вы найдете все подробности о
+            нашем большом дне.
+          </p>
+          <Accordion type="single" collapsible className="w-full text-left">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-lg font-cormorant">
+                Что подарить на свадьбу вместо цветов?
+              </AccordionTrigger>
+              <AccordionContent className="font-inter text-muted-foreground">
+                Мы будем очень благодарны, если вместо цветов вы поддержите приют
+                для животных "Островок" в Речице. Вы можете принести крупы (в
+                мешках), макароны, сухой и влажный корм для кошек и собак,
+                овощи и фрукты для грызунов, а также вакцины, капли от блох и
+                таблетки от глистов. Все собранные вещи будут переданы в приют.
+                Подробности о приюте Instagram:{' '}
+                <a
+                  href="https://www.instagram.com/ostrovok_rechitsa?igsh=a2Z1MXA5bWJrbm1v"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-primary transition-colors"
+                >
+                  @ostrovok_rechitsa
+                </a>
+                .
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-lg font-cormorant">
+                Можно ли привести детей на свадьбу?
+              </AccordionTrigger>
+              <AccordionContent className="font-inter text-muted-foreground">
+                Да, дети могут присутствовать на свадьбе. Однако просим вас
+                внимательно следить за ними, так как отдельной развлекательной
+                программы для детей не предусмотрено.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-lg font-cormorant">
+                Будет ли продолжение после основной части?
+              </AccordionTrigger>
+              <AccordionContent className="font-inter text-muted-foreground">
+                Да, после основной части торжества все желающие смогут
+                присоединиться к нам в доме, где мы продолжим вечер в уютной и
+                неформальной обстановке. Также будут доступны несколько спальных
+                мест для тех, кому необходимо переночевать. Просим заранее
+                сообщить о такой необходимости, так как количество мест
+                ограничено.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
