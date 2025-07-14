@@ -442,13 +442,10 @@ const Index = () => {
                 Альтернативные способы ответа:
               </p>
               <div className="space-y-2 text-xs">
-                <div className="flex items-center justify-center space-x-2">
-                  <Mail className="w-3 h-3" />
-                  <span>sara.mark.wedding@email.com</span>
-                </div>
+ 
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-3 h-3" />
-                  <span>(555) 123-LOVE</span>
+                  <span>+375292549321</span>
                 </div>
               </div>
             </div>
