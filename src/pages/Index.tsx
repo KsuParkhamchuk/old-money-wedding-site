@@ -316,16 +316,16 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-10 space-x-8">
+          <div className="flex flex-col md:flex-row justify-center mt-10 gap-8">
             <img
               src="./images/w9.jpeg"
               alt="Ladies dress code inspiration"
-              className="w-38 h-48 object-cover rounded-md"
+              className="w-full md:w-48 md:h-auto object-contain rounded-md"
             />
             <img
               src="./images/w10.jpeg"
               alt="Gentlemen dress code inspiration"
-              className="w-38 h-48 object-cover  rounded-md"
+              className="w-full md:w-48 md:h-auto object-contain rounded-md"
             />
           </div>
         </div>
