@@ -212,7 +212,7 @@ const Index = () => {
                 Гродно. Именно там, среди новых впечатлений и оживленных
                 разговоров, наши пути впервые пересеклись. Тогда мы были просто
                 знакомыми, но что-то в наших улыбках и взглядах заложило
-                фундамент для чего-то большего.Долгое время мы оставались
+                фундамент для чего-то большего. Долгое время мы оставались
                 друзьями, обмениваясь сообщениями, шутками и поддержкой. Мы
                 вместе участвовали в общественной деятельности лицея, организуя
                 мероприятия и деля сцену во время выступлений. Каждый совместный
@@ -344,7 +344,7 @@ const Index = () => {
           </p>
           <Accordion type="single" collapsible className="w-full text-left">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg font-cormorant">
+              <AccordionTrigger className="text-lg font-cormorant flex w-full justify-between text-left">
                 Что подарить на свадьбу вместо цветов?
               </AccordionTrigger>
               <AccordionContent className="font-inter text-muted-foreground">
@@ -361,7 +361,7 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-lg font-cormorant">
+              <AccordionTrigger className="text-lg font-cormorant flex w-full justify-between text-left">
                 Можно ли привести детей на свадьбу?
               </AccordionTrigger>
               <AccordionContent className="font-inter text-muted-foreground">
@@ -371,7 +371,7 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-lg font-cormorant">
+              <AccordionTrigger className="text-lg font-cormorant flex w-full justify-between text-left">
                 Будет ли продолжение после основной части?
               </AccordionTrigger>
               <AccordionContent className="font-inter text-muted-foreground">
